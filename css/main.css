@@ -1518,8 +1518,13 @@ img {
   color: var(--accent-color);
 }
 
-.headermodal-icon:not(:last-child) {
-  display: inline-block;
+.headermodal-icon {
+  display: block;
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.headermodal-icon.reset {
+  padding-right: 0;
+  border-right: none;
 }/*# sourceMappingURL=main.css.map */
