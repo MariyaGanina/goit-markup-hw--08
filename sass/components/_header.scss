@@ -1,0 +1,11 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+}
