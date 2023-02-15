@@ -297,9 +297,22 @@ img {
 
 .header__logo {
   display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    padding-top: 26px;
+    padding-bottom: 25px;
+    margin-right: 87px;
+  }
+}
+@media (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .footer .logo {
@@ -548,6 +561,14 @@ img {
 .footer-container__right-block {
   width: 100%;
 }
+@media (min-width: 1200px) {
+  .footer-container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
 .footer-contacts {
   color: var(--footer-contact-color);
   font-style: normal;
