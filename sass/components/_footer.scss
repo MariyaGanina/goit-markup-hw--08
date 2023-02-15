@@ -1,128 +1,217 @@
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: var(--back-section-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--back-section-color);
 
-    &-address .nav__item:not(:last-child) {
-        margin-bottom: 9px;
+  &-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+
+    @include onTablet {
+      align-items: center;
     }
 
-    &-container {
-        display: flex;
-        align-items: baseline;
+    @include onDesktop {
+      align-items: start;
+    }
+  }
+
+  &-container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &-socials .icon {
+    fill: var(--back-color);
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+
+  @include onDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__left-block {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    gap: 60px;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      gap: unset;
     }
 
-    &-socials .icon {
-        fill: var(--back-color);
+    @include onDesktop {
+      gap: 70px;
+      flex-direction: row;
+      width: max-content;
     }
+  }
+
+  &__right-block {
+    width: 100%;
+  }
+
+  @include onDesktop {
+  }
 }
 
 .footer-contacts {
-    color: var(--footer-contact-color);
+  color: var(--footer-contact-color);
 
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 
-    text-decoration: none;
-    transition: color var(--animation-orinary) var(--cubic-ordinary);
+  text-decoration: none;
+  transition: color var(--animation-orinary) var(--cubic-ordinary);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-
 
 .footer .item-icon {
-    display: flex;
+  display: flex;
 
-    &:not(:last-child) {
-        margin-right: 10px;
-    }
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
-
 .footer-socials .icon-link {
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
 
-    &:hover,
-    &:focus {
-        background-color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 /* Підписатися */
 
 .subscribe {
-    margin-left: auto;
+  &-button {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    padding-right: 62px;
+  }
 
-    &-button {
-        position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 28px;
-        padding-right: 62px;
-    }
-
-    &-icon {
-        position: absolute;
-        top: 13px;
-        left: 148px;
-    }
+  &-icon {
+    position: absolute;
+    top: 13px;
+    left: 148px;
+  }
 }
 
-
-
 .email-line {
-    padding: 15px 16px;
-    outline: transparent;
-    background-color: var(--back-section-color);
+  padding: 15px 16px;
+  outline: transparent;
+  background-color: var(--back-section-color);
 
+  width: 450px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  margin-right: 12px;
+
+  transition: border-color var(--animation-orinary) var(--cubic-ordinary);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    outline: 1px solid transparent;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @include onDesktop {
     width: 358px;
-    height: 50px;
-
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-
-    margin-right: 12px;
-
-    transition: border-color var(--animation-orinary) var(--cubic-ordinary);
-
-    &:hover,
-    &:focus {
-        border-color: var(--accent-color);
-        outline: 1px solid transparent;
-        color: rgba(255, 255, 255, 0.6);
-    }
+  }
 }
 
 /* Адреса */
 
 .address {
-    color: var(--back-color);
+  color: var(--back-color);
 
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .address-container {
-    margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include onDesktop {
+    width: max-content;
+    align-items: flex-start;
+  }
 }
 
 .footer-socials .title,
 .subscribe .title {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-    color: var(--back-color);
-    margin-bottom: 20px; }
+  color: var(--back-color);
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include onDesktop {
+    align-items: start;
+  }
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include onDesktop {
+      flex-direction: row;
+    }
+  }
+
+  @include onDesktop {
+    align-items: start;
+  }
+}

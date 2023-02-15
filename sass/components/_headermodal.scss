@@ -8,17 +8,15 @@
   background-color: var(--back-color);
   padding: 40px 48px;
 
-  transition: transform var(--cubic-ordinary);
+  transition: transform 250ms var(--cubic-ordinary);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &.is-open {
     transform: translateX(0);
   }
-}
-
-.headermodal-modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .modal-menu_btn {

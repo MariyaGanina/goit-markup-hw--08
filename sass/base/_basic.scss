@@ -1,74 +1,74 @@
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+@mixin onTablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
 body {
-    background-color: var(--back-color);
-    color: var(--primary-text-color);
-    font-family: Roboto, sans-serif;
+  background-color: var(--back-color);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
 }
 
 .container {
-    $mobile: 480px;
-    $tablet: 768px;
-    $desktop: 1200px;
-    
+  // моб. тел. (<767px)
+  min-width: 320px;
+  max-width: 480px;
+  padding: 0 15px;
+  margin: 0 auto;
 
-    // моб. тел. (<767px)
-    min-width: 320px;
-    max-width: 480px;
-    padding: 0 15px;
-    margin: 0 auto;
+  // планшет (>768px)
+  @include onTablet {
+    max-width: $tablet;
+  }
 
-    // планшет (>768px)
-    @media screen and (min-width: 768px) {
-        max-width: 768px;
-    }
-
-    // комп'ютер (>1200px)
-    @media screen and (min-width: 1200px) {
-        max-width: 1200px;
-    }
-
-    outline: 2px solid tomato;
-    outline-offset: -2px;
+  // комп'ютер (>1200px)
+  @include onDesktop {
+    max-width: $desktop;
+  }
 }
 
 /* Секції */
 
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    @media screen and (min-width: 1200px) {
-            padding-top: 94px;
-            padding-bottom: 94px;
-        }
-
+  @include onDesktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* Текст */
 
 .promotion-text {
-    color: var(--ordinary-text-color);
+  color: var(--ordinary-text-color);
 
-    font-size: 16px;
-    line-height: 1.88;
-    text-align: center;
-    letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .name-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
-    letter-spacing: 0.03em;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
-
-
-
-
-
