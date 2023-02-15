@@ -23,6 +23,11 @@
   position: absolute;
   top: 10px;
   right: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__btn-menu {
@@ -59,7 +64,7 @@
 
 .modal-menu__link.contact {
   font-size: 24px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 
   color: var(--ordinary-text-color);
@@ -87,11 +92,12 @@
   align-items: flex-end;
   margin-top: 32px;
   color: var(--accent-color);
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .headermodal-item {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 0 5px;
   &:last-child {
     border: none;
   }
@@ -103,4 +109,10 @@
 
 .headermodal-item:not(:last-child) {
   padding-right: 10px;
+}
+
+.modal-menu__link.contact.large {
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  color: var(--accent-color);
 }

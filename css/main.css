@@ -179,6 +179,13 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header__container {
     display: -webkit-box;
@@ -376,9 +383,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .nav__contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     margin-left: auto;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
@@ -402,8 +407,18 @@ img {
             justify-content: center;
   }
 }
-.nav__list .nav__item:not(:last-child), .nav__contacts .nav__item:not(:last-child) {
+.nav__list .nav__item:not(:last-child) {
   margin-right: 50px;
+}
+@media screen and (min-width: 768px) {
+  .nav__contacts .nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__contacts .nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 /* Меню */
@@ -419,6 +434,12 @@ img {
   text-decoration: none;
   -webkit-transition: color var(--animation-orinary) var(--cubic-ordinary);
   transition: color var(--animation-orinary) var(--cubic-ordinary);
+}
+@media screen and (min-width: 1200px) {
+  .nav__list .nav__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .nav__list .nav__link:hover, .nav__list .nav__link:focus {
   color: var(--accent-color);
@@ -436,14 +457,45 @@ img {
   color: var(--ordinary-text-color);
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14px;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   -webkit-transition: color var(--animation-orinary) var(--cubic-ordinary);
   transition: color var(--animation-orinary) var(--cubic-ordinary);
 }
+@media screen and (min-width: 1200px) {
+  .nav__contacts .nav__link--text {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
 .nav__contacts .nav__link--text:hover, .nav__contacts .nav__link--text:focus {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .nav__link.nav__link--text {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__link.nav__link--text {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__contacts .nav__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__contacts .nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .footer {
@@ -615,10 +667,11 @@ img {
 }
 
 .email-line {
+  width: 100%;
   padding: 15px 16px;
   outline: transparent;
   background-color: var(--back-section-color);
-  width: 450px;
+  max-width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -718,6 +771,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1379,6 +1433,17 @@ img {
   position: absolute;
   top: 10px;
   right: 15px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__btn-menu {
@@ -1413,7 +1478,7 @@ img {
 
 .modal-menu__link.contact {
   font-size: 24px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--ordinary-text-color);
 }
@@ -1442,11 +1507,13 @@ img {
           align-items: flex-end;
   margin-top: 32px;
   color: var(--accent-color);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .headermodal-item {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 0 5px;
 }
 .headermodal-item:last-child {
   border: none;
@@ -1458,4 +1525,10 @@ img {
 
 .headermodal-item:not(:last-child) {
   padding-right: 10px;
+}
+
+.modal-menu__link.contact.large {
+  font-size: 34px;
+  line-height: 1.1764705882;
+  color: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */

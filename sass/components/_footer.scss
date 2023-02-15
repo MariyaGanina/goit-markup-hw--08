@@ -124,11 +124,12 @@
 }
 
 .email-line {
+  width: 100%;
   padding: 15px 16px;
   outline: transparent;
   background-color: var(--back-section-color);
 
-  width: 450px;
+  max-width: 450px;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -203,6 +204,7 @@
 
   & > form {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 20px;
