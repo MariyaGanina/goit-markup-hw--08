@@ -63,6 +63,11 @@
 
   &__right-block {
     width: 100%;
+
+    @include onDesktop {
+      width: 570px;
+      justify-content: flex-end;
+    }
   }
 
   @include onDesktop {
@@ -109,6 +114,7 @@
 
 .subscribe {
   &-button {
+    min-width: 200px;
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -135,8 +141,6 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-
-  margin-right: 12px;
 
   transition: border-color var(--animation-orinary) var(--cubic-ordinary);
 
@@ -211,6 +215,7 @@
 
     @include onDesktop {
       flex-direction: row;
+      justify-content: flex-end;
     }
   }
 
