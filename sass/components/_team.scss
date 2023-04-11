@@ -58,15 +58,15 @@
     align-items: center;
     justify-content: center;
 
-    transition: background-color var(--animation-orinary) var(--cubic-ordinary);
-s
-    &:hover,
-    &:focus {
-        background-color: var(--accent-color);
-    }
+  transition: background-color var(--animation-orinary) var(--cubic-ordinary);
 
-    &:hover>.icon,
-    &:focus>.icon {
-        fill: var(--back-color);
-    }
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+
+  &:hover > .icon,
+  &:focus > .icon {
+    fill: var(--back-color);
+  }
 }
