@@ -22,6 +22,11 @@
   <!-- Меню -->
      <nav class="nav">
       <a href="./index.html" class="header__logo logo">Web<span class="logo__color">Studio</span></a>
+      <button class="header__btn-menu js-open-menu" type="button">
+        <svg class="headermodal-close" width="40" height="40">
+          <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
+        </svg>
+      </button>
         <ul class="nav__list">
          <li class="nav__item">
           <a href="./index.html" class="nav__link"><span>Студія</span></a>
@@ -230,58 +235,93 @@
       </section>
     </main>
 
-<footer class="footer">
-  <div class="footer-container container">
-    <!-- Адреса та контакти -->
-    <div class="address-container">
-      <a href="./index.html" class="logo">Web<span class="studio-white">Studio</span></a>
-      <address>
-        <ul class="footer-address">
-          <li class="nav__item">
-            <a href="https://goo.gl/maps/tnvbLbT5n7H7hsr3A" target="_blank" rel="noreferrer noopener" class="address">м.
-              Київ, пр-т Лесі Українки, 26</a>
-          </li>
-          <li class="nav__item">
-            <a href="mailto:info@devstudio.com" class="footer-contacts">info@devstudio.com</a>
-          </li>
-          <li class="nav__item">
-            <a href="tel:+380961111111" class="footer-contacts">+38 096 111 11 11</a>
-          </li>
-        </ul>
-      </address>
-    </div>
+    <footer class="footer">
+      <div class="footer-container container">
+        <!-- Адреса та контакти -->
+        <div class="footer-container__left-block">
+          <div class="address-container">
+            <a href="./index.html" class="logo"
+              >Web<span class="studio-white">Studio</span></a
+            >
+            <address>
+              <ul class="footer-address">
+                <li class="nav__item">
+                  <a
+                    href="https://goo.gl/maps/tnvbLbT5n7H7hsr3A"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="address"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a href="mailto:info@devstudio.com" class="footer-contacts"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a href="tel:+380961111111" class="footer-contacts"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
 
-    <div class="footer-socials">
-      <h3 class="footer-title title">приєднуйтесь</h3>
-      <ul class="item-icon">
-        <li><a class="icon-link" href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">
-            <svg class="icon" width="20" height="20">
-              <use href="./images/symbol-defs.svg#icon-instagram"></use>
-            </svg></a></li>
-        <li><a class="icon-link" href="https://twitter.com">
-            <svg class="icon" width="20" height="20">
-              <use href="./images/symbol-defs.svg#icon-twitter"></use>
-            </svg></a></li>
-        <li><a class="icon-link" href="https://www.facebook.com"><svg class="icon" width="20" height="20">
-              <use href="./images/symbol-defs.svg#icon-facebook"></use>
-            </svg></a></li>
-        <li><a class="icon-link" href="https://ua.linkedin.com"><svg class="icon" width="20" height="20">
-              <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-            </svg></a></li>
-      </ul>
-    </div>
-    <div class="subscribe">
-      <h3 class="title">Підпишіться на розсилку</h3>
-      <form>
-        <input class="email-line" type="email" placeholder="E-mail">
-        <button class="hero__button subscribe-button" type="submit">Підписатися
-          <svg class="subscribe-icon" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-icon-send"></use>
-          </svg>
-        </button>
-      </form>
-    </div>
-  </div>
-</footer>
+          <div class="footer-socials">
+            <h3 class="footer-title title">приєднуйтесь</h3>
+            <ul class="item-icon">
+              <li>
+                <a
+                  class="icon-link"
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="icon-link" href="https://twitter.com">
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="icon-link" href="https://www.facebook.com"
+                  ><svg class="icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="icon-link" href="https://ua.linkedin.com"
+                  ><svg class="icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-container__right-block">
+          <div class="subscribe">
+            <h3 class="title">Підпишіться на розсилку</h3>
+            <form class="subscribes-form">
+              <input class="email-line" type="email" placeholder="E-mail" />
+              <button class="hero__button subscribe-button" type="submit">
+                Підписатися
+                <svg class="subscribe-icon" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
