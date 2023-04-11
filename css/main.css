@@ -1298,7 +1298,7 @@ img {
   -webkit-transition: background-color var(--animation-orinary) var(--cubic-ordinary);
   transition: background-color var(--animation-orinary) var(--cubic-ordinary);
 }
-s .icon-link:hover, .icon-link:focus {
+.icon-link:hover, .icon-link:focus {
   background-color: var(--accent-color);
 }
 .icon-link:hover > .icon, .icon-link:focus > .icon {
