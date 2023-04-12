@@ -19,6 +19,10 @@
         background-color var(--animation-orinary) var(--cubic-ordinary),
         box-shadow var(--animation-orinary) var(--cubic-ordinary);
 
+        @media screen and (max-width: 767px){
+            margin-bottom: 15px;
+        }
+
     &:hover,
     &:focus {
         color: var(--back-color);
@@ -39,4 +43,3 @@
         margin-right: 8px;
     }
 }
-

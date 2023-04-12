@@ -151,6 +151,11 @@ img {
   transition: color var(--animation-orinary) var(--cubic-ordinary), background-color var(--animation-orinary) var(--cubic-ordinary), box-shadow var(--animation-orinary) var(--cubic-ordinary);
   transition: color var(--animation-orinary) var(--cubic-ordinary), background-color var(--animation-orinary) var(--cubic-ordinary), box-shadow var(--animation-orinary) var(--cubic-ordinary), -webkit-box-shadow var(--animation-orinary) var(--cubic-ordinary);
 }
+@media screen and (max-width: 767px) {
+  .buttons .btn {
+    margin-bottom: 15px;
+  }
+}
 .buttons .btn:hover, .buttons .btn:focus {
   color: var(--back-color);
   background-color: var(--accent-color);
@@ -1159,9 +1164,24 @@ img {
       flex-wrap: wrap;
   gap: 30px;
 }
-.examples .nav__item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+@media screen and (max-width: 767px) {
+  .examples {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .examples .nav__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .examples .nav__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .wrapper {
@@ -1172,6 +1192,16 @@ img {
   border-right: 1px solid var(--wrapper-color);
   border-bottom: 1px solid var(--wrapper-color);
   border-left: 1px solid var(--wrapper-color);
+}
+@media screen and (min-width: 767px) {
+  .wrapper {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    width: 370px;
+  }
 }
 
 .decoration {
@@ -1217,6 +1247,40 @@ img {
 .decoration:hover .overlay, .decoration:focus .overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (max-width: 767px) {
+  .buttons.list {
+    width: 350px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .examples.list img {
+    width: 354px;
+    height: 294px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .examples.list img {
+    width: 370px;
+    height: 294px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrapper.add {
+    height: 147px;
+  }
+}
+
+.overlap {
+  z-index: 100;
 }
 
 /* Команда */

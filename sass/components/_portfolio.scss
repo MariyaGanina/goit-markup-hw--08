@@ -20,8 +20,19 @@
     flex-wrap: wrap;
     gap: 30px;
 
+    @media screen and (max-width: 767px){
+        justify-content: center;
+    }
+
 & .nav__item {
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
         flex-basis: calc((100% - 60px) / 3);
+    }
     }
 }
 
@@ -34,6 +45,14 @@
     border-right: 1px solid var(--wrapper-color);
     border-bottom: 1px solid var(--wrapper-color);
     border-left: 1px solid var(--wrapper-color);
+
+    @media screen and (min-width: 767px){
+        width: 354px;
+    }
+
+    @media screen and (min-width: 1200px){
+        width: 370px;
+    }
 }
 
 .decoration {
@@ -80,6 +99,33 @@
         }
 }
 
+.buttons.list{
+    @media screen and (max-width: 767px){
+        width: 350px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+          
+}
 
+.examples.list img{
+    @media screen and (min-width: $tablet){
+        width: 354px;
+        height: 294px;
+    }
 
+    @media screen and (min-width: $desktop){
+        width: 370px;
+        height: 294px;
+    }
+}
 
+.wrapper.add{
+    @media screen and (min-width: $tablet) and (max-width: 1199px){
+        height: 147px;
+    }
+}
+
+.overlap{
+    z-index: 100;
+}
