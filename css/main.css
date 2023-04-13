@@ -1612,28 +1612,4 @@ img {
 .headermodal-icon.reset {
   padding-right: 0;
   border-right: none;
-}
-
-.contacts__title {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .contacts__title {
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contacts__title {
-    margin-top: 200px;
-    margin-bottom: 200px;
-  }
-}
-
-.contacts__footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }/*# sourceMappingURL=main.css.map */
